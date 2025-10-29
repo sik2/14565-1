@@ -9,7 +9,7 @@ COPY gradlew .
 COPY gradle gradle/
 
 # gradlew에 실행 권한 부여
-RUN chmod +x gradlew
+RUN ./gradlew build -x test --no-daemon
 
 # 빌드 설정 파일 복사
 COPY build.gradle.kts .
